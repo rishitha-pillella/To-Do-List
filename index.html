@@ -1,42 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>To-Do List</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>Colorful To-Do App</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1> To-Do List</h1>
-    <button id="themeToggle">🌞 Light Mode</button>
+    <h1>🎯 My To-Do List</h1>
 
-    <div class="input-container">
-      <input type="text" id="taskInput" placeholder="Add a new task..." />
-      <input type="date" id="dueDateInput" />
-      <select id="categorySelect">
-        <option value="">Category</option>
-        <option value="Personal">Personal</option>
-        <option value="Work">Work</option>
-        <option value="School">School</option>
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Enter a task">
+      <select id="priorityInput">
+        <option value="Low">🟢 Low</option>
+        <option value="Medium">🟡 Medium</option>
+        <option value="High">🔴 High</option>
       </select>
-      <button id="addBtn">Add</button>
+      <input type="datetime-local" id="dueDateInput">
+      <button onclick="addTask()">Add</button>
     </div>
 
-    <!-- Filter Controls -->
-    <div class="filter-controls">
-      <label for="filterDate">Filter by date:</label>
-      <label for="filterWeek">
-        <input type="checkbox" id="filterWeek" />
-        This Week
-      </label>
-      <br><br>
-      <button id="clearFilters">Clear Filters</button>
-    </div>
+    <input type="text" id="searchInput" placeholder="🔍 Search tasks...">
 
     <ul id="taskList"></ul>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
